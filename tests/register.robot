@@ -25,11 +25,11 @@ Deve poder cadastrar um novo entregador
     submete o formulario de cadastro    
     validação de popup                         Recebemos os seus dados. Fique de olho na sua caixa de email, pois e em breve retornamos o contato.
 
-Deve poder cadastrar se o cpf for incorreto
+Não deve poder cadastrar se o cpf for incorreto
 
     [Tags]    cpf_inv
     ${buger_var}            Create Dictionary    
-    ...    name=Edu Ferreira
+    ...    name=vanessa Mendes
     ...    cpf=000000141de
     ...    email=eduQa@gmail.com
     ...    wpp=61998542685
@@ -45,6 +45,27 @@ Deve poder cadastrar se o cpf for incorreto
     Preenche o formulário de cadastro         ${buger_var}
     submete o formulario de cadastro 
     Alert should be  Oops! CPF inválido 
+
+Não deve poder cadastrar se o email for inválido
+
+    [Tags]    email_inv
+    ${buger_var}            Create Dictionary    
+    ...    name=Eduardo paulo
+    ...    cpf=000000141de
+    ...    email=eduQa@gmail
+    ...    wpp=61998542685
+    ...    cep=73357005
+    ...    number=15
+    ...    details=apt 01
+    ...    address=Quadra 19 Conjunto A
+    ...    district=Setor Residencial Leste (Planaltina)
+    ...    city-uf=Brasília/DF
+    ...    cnh=Mr_bean.png
+    
+    Vai pra página de cadastro
+    Preenche o formulário de cadastro         ${buger_var}
+    submete o formulario de cadastro 
+    Alert should be  Oops! Email com formato inválido.
        
 Não deve cadastrar entregador sem o preenchimento dos campos obrigatorios
 
@@ -64,7 +85,7 @@ Deve poder cadastrar entregador que utiliza moto
     ${buger_var}            Create Dictionary    
     ...    name=Edu Ferreira
     ...    cpf=00000014141
-    ...    email=eduQa@gmail.com
+    ...    email=QAE@gmail.com
     ...    wpp=61998542685
     ...    cep=73357005
     ...    number=15
@@ -84,9 +105,9 @@ Deve poder cadastrar entregador que utiliza moto
 Deve poder cadastrar entregador que utiliza Bicicleta
     [Tags]   categoria
     ${buger_var}            Create Dictionary    
-    ...    name=Edu Ferreira
+    ...    name=henri leo
     ...    cpf=00000014141
-    ...    email=eduQa@gmail.com
+    ...    email=henri@gmail.com
     ...    wpp=61998542685
     ...    cep=73357005
     ...    number=15
@@ -106,9 +127,9 @@ Deve poder cadastrar entregador que utiliza Bicicleta
  Deve poder cadastrar entregador que utiliza van/carro
     [Tags]   categoria
     ${buger_var}            Create Dictionary    
-    ...    name=Edu Ferreira
+    ...    name=marlon gomes
     ...    cpf=00000014141
-    ...    email=eduQa@gmail.com
+    ...    email=marlo@gmail.com
     ...    wpp=61998542685
     ...    cep=73357005
     ...    number=15
