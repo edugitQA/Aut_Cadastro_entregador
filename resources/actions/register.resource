@@ -32,9 +32,14 @@ Preenche o formulário de cadastro
     Fill Text                 css=input[name=address-number]                ${buger_var}[number]  
     Fill Text                 css=input[name=address-details]               ${buger_var}[details] 
      
-   
-    Upload File By Selector   css=input[type=file]                          ${EXECDIR}/resources/fixtures/${buger_var}[cnh]
     
+    Upload File By Selector   css=input[type=file]                          ${EXECDIR}/resources/fixtures/${buger_var}[cnh]
+
+categorias de entrega  
+    [Arguments]    ${aditional_service}
+    Click                     xpath=//span[text()="${aditional_service}"]/..
+    Take Screenshot           selector=//span[text()="${aditional_service}"]/..
+
 submete o formulario de cadastro
 
     Click                     css=.button-success
