@@ -1,4 +1,4 @@
-# Automaçaõo de cadastro para entregadores
+# Automação de cadastro para entregadores
 Realizando automação de testes de pagina web Buger Eats, utilizando a biblioteca browser realizado levantamento de 7 cenarios de testes, todos podendo ser executados individualmente e com fácil manipulação de massa de dados, estrutura adequada para facilitar na reutilização do codigo para levantamento de mais cenários e manutenção.
 
 ## Pré-requisitos
